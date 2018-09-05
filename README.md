@@ -4,6 +4,8 @@ sudo apt-get install php-curl
 # setup keycloak
 Go to link 
 https://drive.google.com/open?id=1NiyW99Nf3q0VMHIANSNkGFGw442Zq7MU
+
+
 Download keycloak file and extract it.
 execute the following command to run keycloak:
 cd /keycloak-3.0.0.Final/bin/
