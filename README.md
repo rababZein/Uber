@@ -27,4 +27,10 @@ username:ahmed  && password:123
 ###############
 in the folder database you will find the dump file of database
 in the file /api/config/database.php , please set your database credentials
+# the add trip webservice
+#########################
+url: http://localhost/yourdirectory/api/trips/add.php
+request type: post
+body is json object like that: { "username":"meena" , "password":"123"}
+header: Content-Type:application/json
 
