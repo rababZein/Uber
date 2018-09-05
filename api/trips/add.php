@@ -54,7 +54,7 @@ $trip->trip_date = date('Y-m-d H:i:s');
 // create the trip for the specific driver
 if($trip->create()){
     echo '{';
-        echo '"message": "Trip was added.",';
+        echo '"message": "Trip was added."';
 
     echo '}';
 }
