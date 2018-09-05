@@ -84,6 +84,12 @@ header: Content-Type:application/json
 
 
 
+# HOW TO ACCESS HOME PAGE
+
+from the following link http://localhost/yourdirectory/home/data.php
+
+
+
 # NOTE
 
 Please ignore the part of keycloak setup , and follow the documention (setup-keycloak.pdf).
