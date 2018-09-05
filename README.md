@@ -86,7 +86,7 @@ header: Content-Type:application/json
 
 # NOTE
 
-Please ignore the part of keycloak setup , and follow the documention (keycloak-setup.pdf).
+Please ignore the part of keycloak setup , and follow the documention (setup-keycloak.pdf).
 beacuse I can't uploadthe keycloak file due to my weak internet connection.
 
 
