@@ -32,17 +32,29 @@ $data = json_decode(file_get_contents("php://input"));
 
 $curl = new Curl();
 $access_token= $curl->getAccessToken($data->username,$data->password);
-$driver_reference=$curl->getDriverReferenceNum($access_token);
-//  echo $data; exit;
-// set product property values
-//$trip->id = $data->id;
-$trip->driver_reference =$driver_reference; //$data->driver_reference;//$driver_reference;
+if(isset($access_token["access_token"])){
+    $driver_reference=$curl->getDriverReferenceNum($access_token["access_token"]);
+}else{
+    echo '{';
+        echo '"message": "Unable to add trip. the username or password is incorrect"';
+    echo '}';
+    exit;
+}
+if(isset($driver_reference["sub"])){
+    $trip->driver_reference =$driver_reference["sub"];
+}else{
+    echo '{';
+        echo '"message": "Unable to add trip. this user may has a problm.  please try with another user"';
+    echo '}';
+    exit;
+}
 $trip->trip_date = date('Y-m-d H:i:s');
+
  
 // create the trip for the specific driver
 if($trip->create()){
     echo '{';
-        echo '"message": "Trip was added.",';
+        echo '"message": "Trip was added."';
         // echo '"driver_reference": "'.$driver_reference.'",';
         // echo '"password": '.$data->password;
     echo '}';
