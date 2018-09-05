@@ -57,7 +57,7 @@ function loadstation(){
         if(statusTxt == "error")
             alert("Error: " + xhr.status + ": " + xhr.statusText);
     });
-    //setTimeout(loadstation, 2000);
+    setTimeout(loadstation, 2000);
 }
 </script>
 </head>
