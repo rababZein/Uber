@@ -9,6 +9,9 @@ https://drive.google.com/open?id=1NiyW99Nf3q0VMHIANSNkGFGw442Zq7MU
 Download keycloak file and extract it.
 
 
+<<<<<<<< THIS FILE CONTAIN ALL THE CONFIGRATION, you will not need to do any configrationsteps if you download it, you need just to run itas the following >>>>>>>
+
+
 execute the following command to run keycloak:
 
 
@@ -56,6 +59,7 @@ username:meena  && password:123
 username:ahmed  && password:123
 
 
+
 # Database Setup
 
 in the folder database you will find the dump file of database
@@ -78,5 +82,11 @@ body is json object like that: { "username":"meena" , "password":"123"}
 
 header: Content-Type:application/json
 
+
+
+# NOTE
+
+Please ignore the part of keycloak setup , and follow the documention (keycloak-setup.pdf).
+beacuse I can't uploadthe keycloak file due to my weak internet connection.
 
 
