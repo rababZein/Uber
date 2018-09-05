@@ -9,10 +9,10 @@ class Curl{
     // get access token of the loginned driver
     function getAccessToken($username,$password){
         $this->ch_get1 = curl_init();
-        curl_setopt($this->ch_get1,CURLOPT_URL , "localhost:8080/auth/realms/Demo-Realm/protocol/openid-connect/token");
+        curl_setopt($this->ch_get1,CURLOPT_URL , "localhost:8080/auth/realms/Uber/protocol/openid-connect/token");
         curl_setopt($this->ch_get1, CURLOPT_CUSTOMREQUEST, "POST"); 
         curl_setopt($this->ch_get1, CURLOPT_POSTFIELDS,
-        "username=".$username."&password=".$password."&client_id=tutorial-frontend&grant_type=password" );
+        "username=".$username."&password=".$password."&client_id=Uber&grant_type=password" );
         curl_setopt($this->ch_get1, CURLOPT_RETURNTRANSFER, true);    
         curl_setopt($this->ch_get1, CURLOPT_HTTPHEADER,array(
             "Content-Type" => "application/x-www-form-urlencoded"
@@ -26,7 +26,7 @@ class Curl{
     // get driver reference number of the loginned driver
     function getDriverReferenceNum($access_token){
         $this->ch_get2 = curl_init();
-        curl_setopt($this->ch_get2,CURLOPT_URL , "localhost:8080/auth/realms/Demo-Realm/protocol/openid-connect/userinfo");
+        curl_setopt($this->ch_get2,CURLOPT_URL , "localhost:8080/auth/realms/Uber/protocol/openid-connect/userinfo");
         curl_setopt($this->ch_get2, CURLOPT_CUSTOMREQUEST, "POST"); 
         curl_setopt($this->ch_get2, CURLOPT_POSTFIELDS,
          "access_token=".$access_token );

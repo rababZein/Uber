@@ -55,8 +55,7 @@ $trip->trip_date = date('Y-m-d H:i:s');
 if($trip->create()){
     echo '{';
         echo '"message": "Trip was added.",';
-        // echo '"driver_reference": "'.$driver_reference.'",';
-         echo '"password": '.$data->password;
+
     echo '}';
 }
  
