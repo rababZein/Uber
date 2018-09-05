@@ -18,10 +18,8 @@ click view all users then you will find list of all users
 the id => I used it as driver reference number
 #there are some users for drivers
 #################################
-username:xx  && password:123
-username:aya  && password:123
-username:rabab_zein  && password:123
-username:sara  && password:123
+username:test  && password:123
+
 #Database Setup
 in the folder database you will find the dump file of database
 in the file /api/config/database.php , please set your database credentials
